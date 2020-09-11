@@ -1,0 +1,467 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 J10
+U 1 1 5F5A5736
+P 7725 1825
+F 0 "J10" H 7643 1592 50  0000 C CNN
+F 1 "Conn_01x02" H 7643 1591 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 7725 1825 50  0001 C CNN
+F 3 "~" H 7725 1825 50  0001 C CNN
+	1    7725 1825
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J11
+U 1 1 5F5A5C67
+P 7725 2525
+F 0 "J11" H 7805 2471 50  0000 L CNN
+F 1 "Conn_01x04" H 7805 2426 50  0001 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 7725 2525 50  0001 C CNN
+F 3 "~" H 7725 2525 50  0001 C CNN
+	1    7725 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5F5A6F3B
+P 7300 1825
+F 0 "#PWR0101" H 7300 1575 50  0001 C CNN
+F 1 "GND" H 7305 1652 50  0000 C CNN
+F 2 "" H 7300 1825 50  0001 C CNN
+F 3 "" H 7300 1825 50  0001 C CNN
+	1    7300 1825
+	1    0    0    -1  
+$EndComp
+Text GLabel 7525 2425 0    50   Input ~ 0
+JTAG_TCK
+Text GLabel 7525 2525 0    50   Input ~ 0
+JTAG_TMS
+Text GLabel 7525 2625 0    50   Input ~ 0
+JTAG_TDI
+Text GLabel 7525 2725 0    50   Output ~ 0
+JTAG_TDO
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J1
+U 1 1 5F5ADE4D
+P 8500 3975
+F 0 "J1" H 8550 4300 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 8550 4301 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 8500 3975 50  0001 C CNN
+F 3 "~" H 8500 3975 50  0001 C CNN
+	1    8500 3975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 1725 7525 1725
+Wire Wire Line
+	7300 1825 7525 1825
+Text GLabel 8100 3775 0    50   Output ~ 0
+JTAG_TCK
+Wire Wire Line
+	8100 3775 8300 3775
+Text GLabel 8100 3875 0    50   Input ~ 0
+JTAG_TDO
+Text GLabel 8100 3975 0    50   Output ~ 0
+JTAG_TMS
+Wire Wire Line
+	8100 3975 8300 3975
+NoConn ~ 8300 4075
+NoConn ~ 8800 3975
+NoConn ~ 8800 4075
+$Comp
+L power:GND #PWR01
+U 1 1 5F5BC705
+P 8900 4300
+F 0 "#PWR01" H 8900 4050 50  0001 C CNN
+F 1 "GND" H 8905 4127 50  0000 C CNN
+F 2 "" H 8900 4300 50  0001 C CNN
+F 3 "" H 8900 4300 50  0001 C CNN
+	1    8900 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 4300 8900 4175
+Wire Wire Line
+	8900 4175 8800 4175
+Wire Wire Line
+	8900 4175 8900 3775
+Wire Wire Line
+	8900 3775 8800 3775
+Connection ~ 8900 4175
+Text GLabel 8100 4175 0    50   Output ~ 0
+JTAG_TDI
+Wire Wire Line
+	8100 4175 8300 4175
+Wire Wire Line
+	8100 3875 8300 3875
+$Comp
+L power:+3V3 #PWR02
+U 1 1 5F5BE0DB
+P 9475 3725
+F 0 "#PWR02" H 9475 3575 50  0001 C CNN
+F 1 "+3V3" H 9490 3898 50  0000 C CNN
+F 2 "" H 9475 3725 50  0001 C CNN
+F 3 "" H 9475 3725 50  0001 C CNN
+	1    9475 3725
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR03
+U 1 1 5F5BFFCE
+P 7300 1725
+F 0 "#PWR03" H 7300 1575 50  0001 C CNN
+F 1 "+3V3" H 7315 1898 50  0000 C CNN
+F 2 "" H 7300 1725 50  0001 C CNN
+F 3 "" H 7300 1725 50  0001 C CNN
+	1    7300 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP1
+U 1 1 5F5C14A2
+P 9200 3875
+F 0 "JP1" H 9200 4080 50  0000 C CNN
+F 1 "SolderJumper" H 9200 3989 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 9200 3875 50  0001 C CNN
+F 3 "~" H 9200 3875 50  0001 C CNN
+	1    9200 3875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3875 9050 3875
+Wire Wire Line
+	9350 3875 9475 3875
+Wire Wire Line
+	9475 3875 9475 3725
+$Comp
+L Interface_USB:FT230XS U1
+U 1 1 5F5CD277
+P 3950 2700
+F 0 "U1" H 4250 3400 50  0000 C CNN
+F 1 "FT230XS" H 4350 3300 50  0000 C CNN
+F 2 "Package_SO:SSOP-16_3.9x4.9mm_P0.635mm" H 4950 2100 50  0001 C CNN
+F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT230X.pdf" H 3950 2700 50  0001 C CNN
+	1    3950 2700
+	1    0    0    -1  
+$EndComp
+Text GLabel 4400 4700 0    50   Output ~ 0
+UART_TX
+Text GLabel 4800 2400 2    50   Input ~ 0
+UART_RX
+Text GLabel 4650 6850 2    50   Output ~ 0
+JTAG_TMS
+Text GLabel 4650 6200 2    50   Output ~ 0
+JTAG_TDI
+Text GLabel 4650 5500 2    50   Input ~ 0
+JTAG_TDO
+Text GLabel 4650 4900 2    50   Output ~ 0
+JTAG_TCK
+$Comp
+L Connector:USB_B_Mini J2
+U 1 1 5F6005F8
+P 1900 2600
+F 0 "J2" H 1957 3067 50  0000 C CNN
+F 1 "USB_B_Mini" H 1957 2976 50  0000 C CNN
+F 2 "Connector_USB:USB_Mini-B_Wuerth_65100516121_Horizontal" H 2050 2550 50  0001 C CNN
+F 3 "~" H 2050 2550 50  0001 C CNN
+	1    1900 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2600 2650 2600
+Wire Wire Line
+	2200 2700 2650 2700
+Wire Wire Line
+	2650 2600 2750 2700
+Wire Wire Line
+	2650 2700 2750 2600
+Wire Wire Line
+	2750 2600 3250 2600
+Wire Wire Line
+	3250 2700 2750 2700
+$Comp
+L power:VBUS #PWR0102
+U 1 1 5F61A3C1
+P 2300 2300
+F 0 "#PWR0102" H 2300 2150 50  0001 C CNN
+F 1 "VBUS" H 2315 2473 50  0000 C CNN
+F 2 "" H 2300 2300 50  0001 C CNN
+F 3 "" H 2300 2300 50  0001 C CNN
+	1    2300 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 2300 2300 2400
+Wire Wire Line
+	2300 2400 2200 2400
+$Comp
+L power:VBUS #PWR0103
+U 1 1 5F61B2B4
+P 3850 2000
+F 0 "#PWR0103" H 3850 1850 50  0001 C CNN
+F 1 "VBUS" H 3865 2173 50  0000 C CNN
+F 2 "" H 3850 2000 50  0001 C CNN
+F 3 "" H 3850 2000 50  0001 C CNN
+	1    3850 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2500 4650 2500
+Wire Wire Line
+	4800 2600 4650 2600
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP3
+U 1 1 5F633EBA
+P 4500 5500
+F 0 "JP3" V 4500 5568 50  0000 L CNN
+F 1 "SolderJumper_3_Bridged12" V 4455 5568 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels" H 4500 5500 50  0001 C CNN
+F 3 "~" H 4500 5500 50  0001 C CNN
+	1    4500 5500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4650 2300 4800 2300
+Wire Wire Line
+	4650 2400 4800 2400
+Text GLabel 4800 2800 2    50   Output ~ 0
+CBUS_TCK
+Text GLabel 4800 2900 2    50   Output ~ 0
+CBUS_TMS
+Text GLabel 4800 3000 2    50   Output ~ 0
+CBUS_TDI
+Text GLabel 4800 3100 2    50   Input ~ 0
+CBUS_TDO
+Wire Wire Line
+	4800 3100 4650 3100
+Wire Wire Line
+	4650 3000 4800 3000
+Wire Wire Line
+	4800 2900 4650 2900
+Wire Wire Line
+	4650 2800 4800 2800
+Text GLabel 4400 5700 0    50   Input ~ 0
+CBUS_TDO
+Wire Wire Line
+	4400 5700 4500 5700
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP4
+U 1 1 5F644EB1
+P 4500 6200
+F 0 "JP4" V 4500 6268 50  0000 L CNN
+F 1 "SolderJumper_3_Bridged12" V 4455 6268 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels" H 4500 6200 50  0001 C CNN
+F 3 "~" H 4500 6200 50  0001 C CNN
+	1    4500 6200
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4400 6400 0    50   Input ~ 0
+CBUS_TDI
+Wire Wire Line
+	4400 6400 4500 6400
+Text GLabel 4800 2500 2    50   Input ~ 0
+UART_RTS
+Text GLabel 4400 6000 0    50   Input ~ 0
+UART_RTS
+Wire Wire Line
+	4400 6000 4500 6000
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP5
+U 1 1 5F653E9F
+P 4500 6850
+F 0 "JP5" V 4500 6918 50  0000 L CNN
+F 1 "SolderJumper_3_Bridged12" V 4455 6918 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels" H 4500 6850 50  0001 C CNN
+F 3 "~" H 4500 6850 50  0001 C CNN
+	1    4500 6850
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4400 7050 0    50   Input ~ 0
+CBUS_TMS
+Wire Wire Line
+	4400 7050 4500 7050
+Text GLabel 4400 6650 0    50   Input ~ 0
+UART_CTS
+Wire Wire Line
+	4400 6650 4500 6650
+Text GLabel 4800 2600 2    50   Input ~ 0
+UART_CTS
+Wire Wire Line
+	4400 5300 4500 5300
+Text GLabel 4400 5300 0    50   Input ~ 0
+UART_RX
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP2
+U 1 1 5F664691
+P 4500 4900
+F 0 "JP2" V 4500 4968 50  0000 L CNN
+F 1 "SolderJumper_3_Bridged12" V 4455 4968 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels" H 4500 4900 50  0001 C CNN
+F 3 "~" H 4500 4900 50  0001 C CNN
+	1    4500 4900
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4400 5100 0    50   Input ~ 0
+CBUS_TCK
+Wire Wire Line
+	4400 5100 4500 5100
+Wire Wire Line
+	4400 4700 4500 4700
+Text GLabel 4800 2300 2    50   Output ~ 0
+UART_TX
+$Comp
+L power:GND #PWR09
+U 1 1 5F6D835F
+P 3850 3550
+F 0 "#PWR09" H 3850 3300 50  0001 C CNN
+F 1 "GND" H 3855 3377 50  0000 C CNN
+F 2 "" H 3850 3550 50  0001 C CNN
+F 3 "" H 3850 3550 50  0001 C CNN
+	1    3850 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3400 3850 3500
+Wire Wire Line
+	3850 3500 4050 3500
+Wire Wire Line
+	4050 3500 4050 3400
+Connection ~ 3850 3500
+Wire Wire Line
+	3850 3500 3850 3550
+Wire Wire Line
+	3200 2200 3200 2300
+Wire Wire Line
+	3200 2300 3250 2300
+$Comp
+L Device:C C2
+U 1 1 5F6DFA22
+P 2250 4900
+F 0 "C2" H 2365 4946 50  0000 L CNN
+F 1 "100nF" H 2365 4855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2288 4750 50  0001 C CNN
+F 3 "~" H 2250 4900 50  0001 C CNN
+	1    2250 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5F6E0EF9
+P 2250 5150
+F 0 "#PWR07" H 2250 4900 50  0001 C CNN
+F 1 "GND" H 2255 4977 50  0000 C CNN
+F 2 "" H 2250 5150 50  0001 C CNN
+F 3 "" H 2250 5150 50  0001 C CNN
+	1    2250 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 5150 2250 5050
+$Comp
+L power:VCC #PWR08
+U 1 1 5F6E6125
+P 3200 2200
+F 0 "#PWR08" H 3200 2050 50  0001 C CNN
+F 1 "VCC" H 3215 2373 50  0000 C CNN
+F 2 "" H 3200 2200 50  0001 C CNN
+F 3 "" H 3200 2200 50  0001 C CNN
+	1    3200 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR06
+U 1 1 5F6E666F
+P 2250 4700
+F 0 "#PWR06" H 2250 4550 50  0001 C CNN
+F 1 "VCC" H 2265 4873 50  0000 C CNN
+F 2 "" H 2250 4700 50  0001 C CNN
+F 3 "" H 2250 4700 50  0001 C CNN
+	1    2250 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 4700 2250 4750
+$Comp
+L power:VBUS #PWR04
+U 1 1 5F6EA2A2
+P 1750 4700
+F 0 "#PWR04" H 1750 4550 50  0001 C CNN
+F 1 "VBUS" H 1765 4873 50  0000 C CNN
+F 2 "" H 1750 4700 50  0001 C CNN
+F 3 "" H 1750 4700 50  0001 C CNN
+	1    1750 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5F6EB8CE
+P 1750 4900
+F 0 "C1" H 1865 4946 50  0000 L CNN
+F 1 "100nF" H 1865 4855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1788 4750 50  0001 C CNN
+F 3 "~" H 1750 4900 50  0001 C CNN
+	1    1750 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5F6EB8D8
+P 1750 5150
+F 0 "#PWR05" H 1750 4900 50  0001 C CNN
+F 1 "GND" H 1755 4977 50  0000 C CNN
+F 2 "" H 1750 5150 50  0001 C CNN
+F 3 "" H 1750 5150 50  0001 C CNN
+	1    1750 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 5150 1750 5050
+Wire Wire Line
+	1750 4750 1750 4700
+Wire Notes Line
+	6850 1450 8150 1450
+Wire Notes Line
+	8150 1450 8150 3000
+Wire Notes Line
+	8150 3000 6850 3000
+Wire Notes Line
+	6850 3000 6850 1450
+Text Notes 6950 1400 0    50   ~ 0
+Colorlight 5A-75B headers
+Text Notes 850  850  0    79   ~ 0
+Note: Only use either the FTDI part, or the IDC header.
+$Comp
+L power:GND #PWR?
+U 1 1 5F746534
+P 1800 3100
+F 0 "#PWR?" H 1800 2850 50  0001 C CNN
+F 1 "GND" H 1805 2927 50  0000 C CNN
+F 2 "" H 1800 3100 50  0001 C CNN
+F 3 "" H 1800 3100 50  0001 C CNN
+	1    1800 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3000 1800 3050
+Wire Wire Line
+	1900 3000 1900 3050
+Wire Wire Line
+	1900 3050 1800 3050
+Connection ~ 1800 3050
+Wire Wire Line
+	1800 3050 1800 3100
+$EndSCHEMATC
